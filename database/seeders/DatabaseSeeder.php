@@ -19,5 +19,7 @@ class DatabaseSeeder extends Seeder
             'email' => 'charles@motaroki.com',
             'password' => \bcrypt('password'),
         ]);
+
+        \App\Models\Bookmark::factory(10)->create();
     }
 }
