@@ -2843,7 +2843,7 @@ var BookmarkAddPage = function BookmarkAddPage() {
     className: "row"
   }, react_1["default"].createElement("div", {
     className: "col-sm-8"
-  }, react_1["default"].createElement("div", null, react_1["default"].createElement("p", null, "Welcome to the bookmarkListPage"), react_1["default"].createElement("form", {
+  }, react_1["default"].createElement("div", null, react_1["default"].createElement("p", null, "Welcome to the bookmarkAddPage"), react_1["default"].createElement("form", {
     onSubmit: handleSubmit
   }, react_1["default"].createElement("div", {
     className: "form-group"
@@ -2853,6 +2853,7 @@ var BookmarkAddPage = function BookmarkAddPage() {
     type: "text",
     className: "form-control",
     name: "link",
+    value: state.link,
     onChange: handleChange
   })))))));
 };
@@ -2901,6 +2902,52 @@ var BookmarkListPage = function BookmarkListPage(_a) {
 };
 
 exports.default = BookmarkListPage;
+
+/***/ }),
+
+/***/ "./resources/js/Pages/Bookmark/View/index.tsx":
+/*!****************************************************!*\
+  !*** ./resources/js/Pages/Bookmark/View/index.tsx ***!
+  \****************************************************/
+/***/ (function(__unused_webpack_module, exports, __webpack_require__) {
+
+"use strict";
+
+
+var __importDefault = this && this.__importDefault || function (mod) {
+  return mod && mod.__esModule ? mod : {
+    "default": mod
+  };
+};
+
+Object.defineProperty(exports, "__esModule", ({
+  value: true
+}));
+exports.BookmarkViewPage = void 0;
+
+var react_1 = __importDefault(__webpack_require__(/*! react */ "./node_modules/react/index.js"));
+
+var layout_1 = __webpack_require__(/*! ../../../components/common/layout */ "./resources/js/components/common/layout/index.tsx");
+
+var BookmarkViewPage = function BookmarkViewPage(_a) {
+  var bookmark = _a.bookmark;
+  return react_1["default"].createElement(layout_1.Layout, null, react_1["default"].createElement("div", {
+    className: "row"
+  }, react_1["default"].createElement("div", {
+    className: "col-md-12"
+  }, bookmark && bookmark.title && react_1["default"].createElement("div", {
+    className: "card"
+  }, react_1["default"].createElement("div", {
+    className: "card-header"
+  }, bookmark.title), react_1["default"].createElement("div", {
+    className: "card-body"
+  }, react_1["default"].createElement("p", null, bookmark.description, " "), react_1["default"].createElement("img", {
+    src: bookmark.image,
+    alt: bookmark.title
+  }))))));
+};
+
+exports.BookmarkViewPage = BookmarkViewPage;
 
 /***/ }),
 
@@ -71524,6 +71571,10 @@ var map = {
 	"./Bookmark/List/": "./resources/js/Pages/Bookmark/List/index.tsx",
 	"./Bookmark/List/index": "./resources/js/Pages/Bookmark/List/index.tsx",
 	"./Bookmark/List/index.tsx": "./resources/js/Pages/Bookmark/List/index.tsx",
+	"./Bookmark/View": "./resources/js/Pages/Bookmark/View/index.tsx",
+	"./Bookmark/View/": "./resources/js/Pages/Bookmark/View/index.tsx",
+	"./Bookmark/View/index": "./resources/js/Pages/Bookmark/View/index.tsx",
+	"./Bookmark/View/index.tsx": "./resources/js/Pages/Bookmark/View/index.tsx",
 	"./Home": "./resources/js/Pages/Home/index.tsx",
 	"./Home/": "./resources/js/Pages/Home/index.tsx",
 	"./Home/index": "./resources/js/Pages/Home/index.tsx",
